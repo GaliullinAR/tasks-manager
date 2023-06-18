@@ -129,7 +129,11 @@ ul {
   display: block;
 }
 
-
+@media (max-width: 450px) {
+  .tasks__container {
+    padding: 25px 20px;
+  }
+}
 
 
 
