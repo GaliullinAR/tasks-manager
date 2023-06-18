@@ -4,7 +4,8 @@
   "main": "index.js",
   "author": "GaliullinAR <galiullin.ar651@gmail.com>",
   "scripts": {
-    "start": "webpack serve --hot --progress --mode development"
+    "start": "webpack serve --hot --progress --mode development",
+    "build": "webpack --mode production"
   },
   "license": "MIT",
   "devDependencies": {
