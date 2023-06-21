@@ -10,7 +10,7 @@ export default class CheckboxLogic {
 
     this.inputTasks = this.inputTasks.bind(this);
     this.form.addEventListener('submit', this.inputTasks);
-    // localStorage.clear()
+    // localStorage.clear();
     this.tasksDesktop = this.selector.querySelector('.tasks__desktop');
 
     this.docLoad("tasks");
@@ -31,6 +31,7 @@ export default class CheckboxLogic {
         } else {
           checkbox.checked = true;
         }
+        console.log(checkbox.checked);
         
         if (target.classList.contains("done")) {
           target.classList.remove("done");
@@ -94,7 +95,7 @@ export default class CheckboxLogic {
         <li class="tasks__item done">
           <label>
             <span>${value}</span>
-            <input class="checkbox" type="checkbox">
+            <input class="checkbox" type="checkbox" checked>
             <div class="checkbox-icon"></div>
           </label>
         </li>
