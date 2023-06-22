@@ -48,12 +48,18 @@ ul {
 .tasks-value {
   flex: 1 1 auto;
   margin-right: 10px;
-  padding: 10px;
+  padding: 8px;
   font-size: 18px;
   outline: none;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
   border-radius: 14px;
+  font-family: cursive;
+  font-weight: 500;
+}
+
+.tasks-value::placeholder {
+  font-family: cursive;
 }
 
 .send {
@@ -76,7 +82,7 @@ ul {
   top: 50px;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in;
 }
 
 .message::before {
@@ -94,6 +100,7 @@ ul {
 .message.active {
   visibility: visible;
   opacity: 1;
+  transition: all 0.2s ease-out;
 }
 
 .tasks__desktop {
@@ -112,7 +119,7 @@ ul {
   border-radius: 14px;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: all 0.4s linear;
+  transition: width 0.2s ease, visibility 0.4s ease-in, transform 0.4s ease-in, opacity 0.4s ease-in;
   cursor: pointer;
   visibility: visible;
   opacity: 1;
