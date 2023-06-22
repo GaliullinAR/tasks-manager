@@ -96,6 +96,10 @@ ul {
   opacity: 1;
 }
 
+.tasks__desktop {
+  overflow-x: hidden;
+}
+
 .tasks__item {
   margin-bottom: 10px;
   margin-left: auto;
@@ -108,13 +112,21 @@ ul {
   border-radius: 14px;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: 0.2s linear;
+  transition: all 0.4s linear;
   cursor: pointer;
+  visibility: visible;
+  opacity: 1;
 }
 
 .tasks__item.done {
   opacity: 0.7;
   width: 95%;
+}
+
+.tasks__item.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%);
 }
 
 .tasks__item label {

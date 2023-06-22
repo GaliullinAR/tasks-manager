@@ -104,8 +104,12 @@ export default class CheckboxLogic {
 
     localStorage.clear();
     const childs = Array.from(this.tasksDesktop.children);
-    childs.forEach(item => {
-      item.remove();
+    childs.forEach((item, i) => {
+      item.classList.add('hidden');
+      item.style.transitionDelay = `${i * 100}ms`;
+      setTimeout(() => {
+        item.remove()
+      }, 1000);
     })
   }
 
