@@ -9,6 +9,10 @@ export default class CheckboxLogic {
     this.form = this.selector.querySelector('.tasks-form');
 
     this.inputTasks = this.inputTasks.bind(this);
+    this.clearDesktopAndStorage = this.clearDesktopAndStorage.bind(this);
+
+    this.bucket = this.selector.querySelector('.bucket');
+
     this.form.addEventListener('submit', this.inputTasks);
     // localStorage.clear();
     this.tasksDesktop = this.selector.querySelector('.tasks__desktop');
@@ -48,6 +52,7 @@ export default class CheckboxLogic {
       
     })
 
+    this.bucket.addEventListener('click', this.clearDesktopAndStorage);
     
   }
 
@@ -89,9 +94,19 @@ export default class CheckboxLogic {
       const timeout = setTimeout(() => {
         message.classList.remove('active');
         clearTimeout(timeout);
-      }, 1500);
+      }, 2500);
     }
 
+  }
+
+  clearDesktopAndStorage(e) {
+    e.preventDefault();
+
+    localStorage.clear();
+    const childs = Array.from(this.tasksDesktop.children);
+    childs.forEach(item => {
+      item.remove();
+    })
   }
 
   renderTasks(value, isChecked) {

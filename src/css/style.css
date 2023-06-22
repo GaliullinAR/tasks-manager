@@ -20,6 +20,7 @@ ul {
 }
 
 .tasks__container {
+  position: relative;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
   max-width: 600px;
   padding: 30px 60px;
@@ -161,9 +162,29 @@ ul {
   display: block;
 }
 
+.bucket {
+  position: absolute;
+  border: none;
+  background: none;
+  cursor: pointer;
+  top: 35px;
+  right: 60px;
+  width: 30px;
+  height: 30px;
+}
+
+.bucket-img {
+  width: 100%;
+}
+
 @media (max-width: 450px) {
   .tasks__container {
     padding: 25px 20px;
+  }
+
+  .bucket {
+    top: 30px;
+    right: 20px;
   }
 }
 
