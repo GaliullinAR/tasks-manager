@@ -46,8 +46,6 @@ export default class CheckboxLogic {
 
       this.setDataForCheckbox();
       
-
-      
     })
 
     
@@ -80,11 +78,20 @@ export default class CheckboxLogic {
     e.preventDefault();
 
     const value = e.target.querySelector('.tasks-value').value;
+    if (value.trim().length > 0) {
+      this.renderTasks(value.trim());
+      this.setDataForCheckbox();
+      this.setStorage('tasks', value);
+      e.target.querySelector('.tasks-value').value = '';
+    } else {
+      const message = document.querySelector('.message');
+      message.classList.add('active');
+      const timeout = setTimeout(() => {
+        message.classList.remove('active');
+        clearTimeout(timeout);
+      }, 1500);
+    }
 
-    this.renderTasks(value.trim());
-    this.setDataForCheckbox();
-    this.setStorage('tasks', value);
-    e.target.querySelector('.tasks-value').value = '';
   }
 
   renderTasks(value, isChecked) {
