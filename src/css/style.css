@@ -23,12 +23,12 @@ ul {
   position: relative;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
   max-width: 600px;
-  min-height: calc(100vh - 30px);
+  min-height: calc(100vh - 40px);
   padding: 30px 60px;
   background: url(../images/list.jpg);
   background-size: contain;
   background-position: center center;
-  margin: 10px auto 0;
+  margin: 10px auto;
   background-color: #999;
 }
 
@@ -144,6 +144,7 @@ ul {
 
 .tasks__item label span {
   flex: 1 1 80%;
+  font-weight: 700;
 }
 
 .checkbox {
