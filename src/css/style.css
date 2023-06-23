@@ -9,7 +9,7 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   background-color: #c3c3c3;
   font-family: "Dancing Script", cursive;
   padding: 10px 5px;
@@ -23,12 +23,12 @@ ul {
   position: relative;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
   max-width: 600px;
+  min-height: calc(100vh - 30px);
   padding: 30px 60px;
   background: url(../images/list.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: contain;
   background-position: center center;
-  margin: 10px auto;
+  margin: 10px auto 0;
   background-color: #999;
 }
 
